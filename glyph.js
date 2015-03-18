@@ -30,10 +30,8 @@ var convert = function(text) {
   for (word of text.split(' ')) {
     var code = '';
     for (sign of word.split('-')) {
-      if (sign == 'an') {
-        code += '𒀭';
-      } else if (sign == 'na') {
-        code += '𒈾';
+      if (sign in akkad_table) {
+        code += akkad_table[sign];
       } else {
         code += sign;
       }
