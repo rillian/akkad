@@ -3,11 +3,18 @@
   <head>
     <meta charset=utf-8>
     <title>Akkadian language resources</title>
+    <script src=glyph.js></script>
   </head>
   <body>
     <h1>Akkadian</h1>
-    <div id=text>
-    </div>
+    <div id=cuneiform></div>
     <label>Transliteration: <input type=text name=transliteration></label>
+    <script>
+      document.querySelector('input').addEventListener('input', event => {
+        console.log('Got input event.');
+        var cuneiform = convert(event.target.value);
+        document.querySelector('#cuneiform').textContent = cuneiform;
+      });
+    </script>
   </body>
 </html>
