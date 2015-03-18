@@ -8,6 +8,8 @@ var convert = function(text) {
     for (sign of word.split('-')) {
       if (sign == 'an') {
         code += '𒀭';
+      } else if (sign == 'na') {
+        code += '𒈾';
       } else {
         code += sign;
       }
