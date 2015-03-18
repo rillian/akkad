@@ -1,0 +1,8 @@
+/* CSS rules for Akkadian display
+ * Copyright 2015 Ralph Giles. GPLv3.
+ */
+
+/* Make glyphs big enough to read. */
+#cuneiform {
+  font-size: 64px;
+}
