@@ -1,7 +1,10 @@
 // Convert Akkadian transliteration to unicode cuneiform.
 // Copyright 2015 Ralph Giles. GPLv3.
 
-
+// Sign values from Huehnergard's "A Grammar of Akkadian",
+// 3rd Edition, compiled by Angelika and published with
+// the AkkadianStudy Yahoo Group. Unicode values from
+// http://www.unicode.org/charts/PDF/U12000.pdf
 var akkad_table = {
   'aš': '𒀸',
   'rum': '𒀸',
