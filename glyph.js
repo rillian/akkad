@@ -16,5 +16,5 @@ var convert = function(text) {
     }
     wedges.push(code)
   }
-  return wedges.join();
+  return wedges.join(' ');
 }
