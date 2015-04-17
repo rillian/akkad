@@ -1,9 +1,20 @@
 # Makefile for dependencies and deployment.
 # Copyright 2015 Ralph Giles. GPLv3.
 
-SRCS := index.html glyph.js glyph.css Akkadian.ttf
+SRCS := index.html glyph.js glyph.css Akkadian.ttf CNAME
 
 all: $(SRCS)
+
+# CNAME file for setting deployment domain.
+# Edit this locally to override.
+CNAME:
+	echo akkad.surge.sh > $@
+
+deploy: $(SRCS)
+	-rm -rf _deploy
+	mkdir _deploy
+	cp $^ _deploy/
+	surge _deploy/
 
 Akkadian.ttf: Akkadian.zip
 	unzip $<
