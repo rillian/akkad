@@ -13,3 +13,16 @@
   font-family: Akkadian, Noto;
   font-size: 64px;
 }
+
+div.space {
+  margin: 64px;
+}
+
+footer {
+  font-size: small;
+}
+
+footer p.link {
+  margin: 0;
+  color: 0x333;
+}
