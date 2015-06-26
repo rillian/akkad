@@ -27,3 +27,10 @@ Akkadian.zip:
 	SHA2=$(sha256sum $@ | cut -f 1 -d ' ')
 	@if test ${SHA2} != $(Akkadian_zip_SHA2); then \
 	  echo "Checksum mismatch for $@!;" exit 1; fi
+
+NotoSansCuneiform_zip_SHA2 := 6eb7b77387c298c8cff328d0d0084d35e5e264352a382e7b3aefb7061beedec0
+NotoSansCuneiform-unhinted.zip:
+	curl -sO https://noto-website.storage.googleapis.com/pkgs/NotoSansCuneiform-unhinted.zip
+	SHA2=$(sha256sum $@ | cut -f 1 -d ' ')
+	@if test ${SHA2} != $(NotoSansCuneiform_zip_SHA2); then \
+	  echo "Checksum mismatch for $@!;" exit 1; fi
