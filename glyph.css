@@ -5,7 +5,9 @@
 @font-face {
   /* George Douros' Akkadian font. http://users.teilar.gr/~g1951d/ */
   font-family: Akkadian;
-  src: local(Akkadian),
+  src:
+       url(NotoSansCuneiform-Regular.ttf),
+       local(Akkadian),
        url(Akkadian.ttf);
 }
 
